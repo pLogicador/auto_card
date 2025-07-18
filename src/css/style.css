@@ -155,3 +155,14 @@ h1 {
     text-align: right;
   }
 }
+
+/* Footer styles */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #30363d;
+  color: #8b949e;
+  font-size: 0.9rem;
+  text-align: center;
+  user-select: none;
+}
