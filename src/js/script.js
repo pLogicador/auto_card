@@ -12,12 +12,17 @@ function escapeHtml(unsafe) {
 
 // Function to extract YouTube video ID from a link
 function getYouTubeVideoId(url) {
-  // Handles URLs like https://youtu.be/VIDEO_ID or https://www.youtube.com/watch?v=VIDEO_ID
+  // https://youtu.be/VIDEO_ID
   const shortMatch = url.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/);
   if (shortMatch) return shortMatch[1];
 
+  // https://www.youtube.com/watch?v=VIDEO_ID
   const longMatch = url.match(/[?&]v=([a-zA-Z0-9_-]{11})/);
   if (longMatch) return longMatch[1];
+
+  // https://youtube.com/live/VIDEO_ID
+  const liveMatch = url.match(/youtube\.com\/live\/([a-zA-Z0-9_-]{11})/);
+  if (liveMatch) return liveMatch[1];
 
   return null; // Not a valid YouTube URL
 }
