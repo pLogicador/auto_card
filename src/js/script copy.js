@@ -81,21 +81,12 @@ fetch("data/events.json")
             onkeypress="if(event.key === 'Enter') window.open('${cleanLink}', '_blank')"
           />
         </div>
-
-        <div class="card-content">
-          <div class="card-header">
-            <h2>${safeTitle}</h2>
-            <span class="event-date">${formattedDate}</span>
-          </div>
-
-          <a 
-            class="button" 
-            href="${cleanLink}" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            🔗 Assistir
-          </a>
+        <div class="card-header">
+          <h2>${safeTitle}</h2>
+          <span class="event-date">${formattedDate}</span>
+        </div>
+        <div class="card-footer">
+          <a class="button" href="${cleanLink}" target="_blank" rel="noopener noreferrer">🔗 Assistir à Live</a>
         </div>
       `;
 

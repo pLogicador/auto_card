@@ -7,23 +7,37 @@
     <title>Agenda de Eventos</title>
 
     <link rel="icon" href="src/image/logo.png" type="image/png" />
+
+    <!-- Fonte mais moderna -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
+
   <body>
-    <main>
-      <div class="header">
-        <!-- <img src="src/image/logo.png" alt="Logo do site" class="logo" /> -->
-        <h1>Agenda de Eventos da Semana</h1>
-      </div>
-      <p>
-        Fique atento aos próximos eventos! Clique no botão para participar da
-        live no horário marcado.
+    <main class="container">
+      <header class="header">
+        <div class="header-left">
+          <img src="src/image/logo.png" alt="Logo" class="logo" />
+          <div class="title-group">
+            <h1>Agenda de Eventos</h1>
+            <span class="tag">Lives agendadas</span>
+          </div>
+        </div>
+      </header>
+
+      <p class="subtitle">
+        Acompanhe os próximos eventos e acesse as lives no horário certo.
       </p>
-      <div id="event-list"></div>
+
+      <section id="event-list"></section>
     </main>
 
     <footer>
-      <p>© 2025 pLogicador - Todos os direitos reservados.</p>
+      <p>© 2025 pLogicador</p>
     </footer>
 
     <script src="src/js/script.js"></script>
